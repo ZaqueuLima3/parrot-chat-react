@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
-import parrot from '../../assets/parrot-icon.png';
+import parrot from '../../assets/img/parrot-icon.png';
 
 const Login = () => (
   <Container>

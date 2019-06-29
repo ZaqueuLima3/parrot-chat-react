@@ -60,10 +60,6 @@ export const Container = styled.div`
       color: var(--color-white);
       font-weight: bold;
       border-radius: var(--radius-small);
-
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 `;

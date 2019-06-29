@@ -10,6 +10,12 @@ const Base = createGlobalStyle`
     font-family: inherit;
     font-size: inherit;
   }
+
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export default Base;
