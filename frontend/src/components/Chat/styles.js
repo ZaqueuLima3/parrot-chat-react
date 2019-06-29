@@ -33,20 +33,20 @@ export const Header = styled.div`
 
 export const Content = styled.div`
   flex: 1;
+  padding: var(--spacing-medium);
 `;
 
 export const Footer = styled.div`
   height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 var(--spacing-medium);
 
   background: var(--color-primary);
   border: 1px solid #b9b9b9;
 
   img {
     width: 60px;
-    margin-right: var(--spacing-medium);
+    margin-left: var(--spacing-medium);
 
     background-color: var(--color-secondary);
     border-radius: 30px;
@@ -59,10 +59,11 @@ export const Footer = styled.div`
   form {
     display: flex;
     flex: 1;
+    justify-content: center;
+    padding: 0 var(--spacing-medium);
 
     input {
-      flex: 1;
-      flex-wrap: wrap;
+      width: 90%;
       margin-right: 20px;
       padding: var(--spacing-small);
 
