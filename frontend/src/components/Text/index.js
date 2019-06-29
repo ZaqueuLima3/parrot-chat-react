@@ -2,11 +2,14 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const Text = ({ image, parrot, msg }) => (
+import Parrot from '../../assets/img/parrot-icon.png';
+import User from '../../assets/img/default-user.png';
+
+const Text = ({ parrot, msg }) => (
   <Container parrot={parrot}>
     {parrot ? (
       <>
-        <img src={image} alt="user" />
+        <img src={Parrot} alt="user" />
         <div>
           <p>{msg}</p>
         </div>
@@ -16,7 +19,7 @@ const Text = ({ image, parrot, msg }) => (
         <div>
           <p>{msg}</p>
         </div>
-        <img src={image} alt="user" />
+        <img src={User} alt="user" />
       </>
     )}
   </Container>

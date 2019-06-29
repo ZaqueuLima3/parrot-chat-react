@@ -17,11 +17,17 @@ export const Container = styled.div`
   }
 
   p {
-    max-width: 180px;
+    max-width: 350px;
     padding: var(--spacing-small);
 
-    background-color: ${props => (props.parrot ? 'var(--color-light)' : 'var(--color-secondary)')};
+    background-color: var(--color-light);
     border-radius: var(--radius-small);
-    font-size: var(--size-small);
+    font-size: var(--size-medium);
+    font-weight: 400;
+    color: var(--color-base);
+
+    @media (max-width: 650px) {
+      max-width: 180px;
+    }
   }
 `;
