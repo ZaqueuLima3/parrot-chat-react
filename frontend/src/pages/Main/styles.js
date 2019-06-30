@@ -26,7 +26,7 @@ export const Chat = styled.div`
   }
 `;
 
-export const Header = styled.div`
+export const HeaderChat = styled.div`
   height: 80px;
   display: flex;
   align-items: center;
@@ -43,12 +43,12 @@ export const Header = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const ContentChat = styled.div`
   flex: 1;
   padding: var(--spacing-medium);
 `;
 
-export const Footer = styled.div`
+export const FooterChat = styled.div`
   height: 80px;
   display: flex;
   align-items: center;
@@ -96,6 +96,16 @@ export const Footer = styled.div`
       color: var(--color-white);
       font-weight: bold;
       border-radius: var(--radius-small);
+      outline: none;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 2px 4px var(--color-base);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
     }
   }
 `;

@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   margin-bottom: var(--spacing-small);
   align-items: center;
-  justify-content: ${props => (props.parrot ? 'flex-start' : 'flex-end')};
+  justify-content: ${props => (props.isParrot ? 'flex-start' : 'flex-end')};
 
   img {
     width: 30px;
