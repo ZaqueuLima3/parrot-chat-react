@@ -12,6 +12,11 @@ const Reset = createGlobalStyle`
     list-style: none;
   }
 
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export default Reset;
