@@ -4,7 +4,7 @@
 
 Parrot chat is a challenge to construct a chat using websocket echo
 
-## Roadmap
+## Technology
 
 ### Web version
 
