@@ -1,6 +1,9 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Container, Chat, ImageUser, Content, TextContent } from "./styles";
+import {
+  Container, Chat, ImageUser, Content, TextContent,
+} from './styles';
 
 const TextChat = ({ parrot, message, image }) => (
   <Container>
@@ -21,5 +24,11 @@ const TextChat = ({ parrot, message, image }) => (
     )}
   </Container>
 );
+
+TextChat.propTypes = {
+  parrot: PropTypes.bool.isRequired,
+  message: PropTypes.string.isRequired,
+  image: PropTypes.number.isRequired,
+};
 
 export default TextChat;

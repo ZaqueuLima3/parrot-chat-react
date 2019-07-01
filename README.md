@@ -47,3 +47,31 @@ or
 ```
 $ npm start
 ```
+
+### Mobile version
+
+This pages will help you install and config your development environment
+
+https://facebook.github.io/react-native/docs/getting-started.html
+or
+https://docs.rocketseat.dev/ambiente-react-native/introducao
+
+```
+$ cd mobile-one && yarn
+```
+
+or
+
+```
+$ cd mobile-one && npm i
+```
+
+```
+$ react-native run-android
+```
+
+or
+
+```
+$ react-native run-ios
+```

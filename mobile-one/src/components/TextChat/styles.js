@@ -1,9 +1,7 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const Container = styled.View`
   width: 100%;
-  flex-direction: row;
-  align-items: center;
 `;
 
 export const Chat = styled.View`
@@ -11,7 +9,7 @@ export const Chat = styled.View`
   margin-bottom: 10px;
   flex-direction: row;
   align-items: center;
-  justify-content: ${props => (props.isParrot ? "flex-start" : "flex-end")};
+  justify-content: ${props => (props.isParrot ? 'flex-start' : 'flex-end')};
 `;
 
 export const ImageUser = styled.Image`

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import socket from "../../services/websocket";
+import React, { Component } from 'react';
+import socket from '../../services/websocket';
 
-import TextChat from "../../components/TextChat";
+import TextChat from '../../components/TextChat';
 
-import ParrotImage from "../../assets/img/parrot-icon.png";
-import UserImage from "../../assets/img/default-user.png";
+import ParrotImage from '../../assets/img/parrot-icon.png';
+import UserImage from '../../assets/img/default-user.png';
 
 import {
   Container,
@@ -15,18 +15,21 @@ import {
   FooterChat,
   Button,
   TextButton,
-  Input
-} from "./styles";
-
-import { stringify } from "jest-matcher-utils";
+  Input,
+} from './styles';
 
 export default class Main extends Component {
   state = {
-    message: "",
+    message: '',
     messages: [],
-    id: 1
+    id: 1,
   };
 
+  /**
+   * When the user send a message this function check if the field 'message' is true,
+   * case is true the object data is seted and sended to array massages in the state,
+   * after this the massage is send to webscoket and the return is seted in another object data.
+   */
   handleSubmit = async () => {
     const { message, messages, id } = this.state;
 
@@ -35,7 +38,7 @@ export default class Main extends Component {
     const data = {
       message,
       parrot: false,
-      id
+      id,
     };
 
     await this.setState({ messages: [...messages, data], id: id + 1 });
@@ -43,24 +46,32 @@ export default class Main extends Component {
     socket.send(message);
     await this.handleSocketResponse();
 
-    await this.setState({ message: "" });
+    await this.setState({ message: '' });
   };
 
   handleSocketResponse = () => {
     const { messages, id } = this.state;
 
-    socket.onmessage = event => {
+    socket.onmessage = (event) => {
       const data = {
         message: event.data,
         parrot: true,
-        id
+        id,
       };
 
       this.setState({
         messages: [...messages, data],
-        id: id + 1
+        id: id + 1,
       });
     };
+  };
+
+  hanldeSetFlatList = (element) => {
+    this.flatList = element;
+  };
+
+  handleFocusFlatList = () => {
+    if (this.flatList) this.flatList.scrollToEnd();
   };
 
   render() {
@@ -74,9 +85,9 @@ export default class Main extends Component {
 
           <ContentChat
             data={messages}
-            keyExtractor={item => stringify(item.id)}
-            ref="flatList"
-            onContentSizeChange={() => this.refs.flatList.scrollToEnd()}
+            keyExtractor={item => String(item.id)}
+            ref={this.hanldeSetFlatList}
+            onContentSizeChange={this.handleFocusFlatList}
             renderItem={({ item }) => (
               <TextChat
                 parrot={item.parrot}
@@ -90,11 +101,11 @@ export default class Main extends Component {
             <Input
               placeholder="type a massage"
               autoCorrect={false}
-              multiline={true}
+              multiline
               autoCapitalize="none"
               placeholderTextColor="#999"
               value={message}
-              onChangeText={message => this.setState({ message })}
+              onChangeText={msg => this.setState({ message: msg })}
             />
             <Button onPress={this.handleSubmit}>
               <TextButton>Enviar</TextButton>
