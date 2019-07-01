@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import socket from '../../server/websocket';
+import socket from '../../services/websocket';
 
 import TextChat from '../../components/TextChat';
 
