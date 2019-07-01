@@ -25,6 +25,19 @@ export const HeaderChat = styled.View`
   background-color: #2f6073;
 `;
 
+export const Error = styled.View`
+  width: 100%;
+  padding: 5px;
+
+  background-color: #dc3545;
+`;
+
+export const TextError = styled.Text`
+  width: 100%;
+  text-align: center;
+  color: #fff;
+`;
+
 export const ImageHader = styled.Image`
   height: 40px;
   width: 40px;
@@ -54,7 +67,7 @@ export const Input = styled.TextInput`
   background-color: #fff;
   border-width: 1;
   border-radius: 10px;
-  border-color: #f3f3f3;
+  border-color: ${props => (props.error ? '#dc3545' : '#f3f3f3')};
 `;
 
 export const Button = styled.TouchableOpacity`

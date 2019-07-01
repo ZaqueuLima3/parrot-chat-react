@@ -33,7 +33,6 @@ export const HeaderChat = styled.div`
   padding-left: var(--spacing-medium);
 
   background: var(--color-primary);
-  border: 1px solid #b9b9b9;
 
   img {
     width: 60px;
@@ -74,21 +73,6 @@ export const FooterChat = styled.div`
     justify-content: center;
     padding: 0 var(--spacing-medium);
 
-    input {
-      width: 90%;
-      margin-right: 20px;
-      padding: var(--spacing-small);
-
-      border-radius: var(--radius-medium);
-      font-size: var(--size-medium);
-
-      &:focus,
-      &:hover {
-        border: 1px solid var(--color-dark);
-        outline: none;
-      }
-    }
-
     button {
       padding: 0 var(--spacing-small);
 
@@ -107,5 +91,34 @@ export const FooterChat = styled.div`
         transform: translateY(-1px);
       }
     }
+  }
+`;
+
+export const Error = styled.div`
+  width: 100%;
+  padding: 5px;
+
+  background-color: var(--color-danger);
+
+  p {
+    width: 100%;
+    text-align: center;
+    color: var(--color-white);
+  }
+`;
+
+export const Input = styled.input`
+  width: 90%;
+  margin-right: 20px;
+  padding: var(--spacing-small);
+
+  border-radius: var(--radius-medium);
+  font-size: var(--size-medium);
+  border: ${props => (props.error ? '1px solid var(--color-danger)' : 'none')};
+
+  &:focus,
+  &:hover {
+    border: 1px solid ${props => (props.error ? 'var(--color-danger)' : 'var(--color-dark)')};
+    outline: none;
   }
 `;

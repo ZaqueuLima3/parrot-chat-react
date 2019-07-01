@@ -10,6 +10,7 @@ const Colors = createGlobalStyle`
     --color-secondary: #7297A6;
     --color-dark: #022340;
     --color-darker: #011526;
+    --color-danger: #dc3545;
   }
 `;
 

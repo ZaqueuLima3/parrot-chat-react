@@ -7,6 +7,7 @@ import {
 
 const TextChat = ({ parrot, message, image }) => (
   <Container>
+    {/* {if parrot is true render the text on left side else render on the right side} */}
     {parrot ? (
       <Chat isParrot={parrot}>
         <ImageUser source={image} />
@@ -25,6 +26,7 @@ const TextChat = ({ parrot, message, image }) => (
   </Container>
 );
 
+// set the types for the props
 TextChat.propTypes = {
   parrot: PropTypes.bool.isRequired,
   message: PropTypes.string.isRequired,
