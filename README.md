@@ -53,7 +53,9 @@ $ npm start
 This pages will help you install and config your development environment
 
 https://facebook.github.io/react-native/docs/getting-started.html
+
 or
+
 https://docs.rocketseat.dev/ambiente-react-native/introducao
 
 ```
