@@ -87,7 +87,7 @@ export default class Main extends Component {
   };
 
   // scroll to end when it receive a new message
-  handleFocusFlatList = () => {
+  hanldeScrollToBottom = () => {
     if (this.flatList) this.flatList.scrollToEnd();
   };
 
@@ -112,7 +112,7 @@ export default class Main extends Component {
             data={messages}
             keyExtractor={item => String(item.id)}
             ref={this.hanldeSetFlatList}
-            onContentSizeChange={this.handleFocusFlatList}
+            onContentSizeChange={this.hanldeScrollToBottom}
             renderItem={({ item }) => (
               <TextChat
                 parrot={item.parrot}

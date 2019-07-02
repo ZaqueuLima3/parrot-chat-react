@@ -45,6 +45,7 @@ export const HeaderChat = styled.div`
 export const ContentChat = styled.div`
   flex: 1;
   padding: var(--spacing-medium);
+  overflow: auto;
 `;
 
 export const FooterChat = styled.div`
