@@ -15,6 +15,10 @@ class TextChat extends Component {
     this.hanldeScrollToBottom();
   }
 
+  componentDidUpdate() {
+    this.hanldeScrollToBottom();
+  }
+
   // set the list for using in the ref
   hanldeSetChatList = (element) => {
     this.chatList = element;
@@ -22,7 +26,7 @@ class TextChat extends Component {
 
   // scroll to end when it receive a new message
   hanldeScrollToBottom() {
-    this.chatList.scrollIntoView({ behavior: 'smooth' });
+    if (this.chatList) this.chatList.scrollIntoView({ behavior: 'smooth' });
   }
 
   render() {
